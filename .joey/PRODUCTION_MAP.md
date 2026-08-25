@@ -65,6 +65,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - 2026-08-25 — Allocate 24 of the 99 free generations to the complete first pass. Reserve 75 generations for continuity repairs, alternate compositions, missing inserts and final replacements.
 - 2026-08-25 — Published Joey Workflow and Agent Technical English as reusable public skills in this repository.
 - 2026-08-25 — Removed one obsolete unsupported Joey frontmatter key before public validation. The workflow instructions did not change.
+- 2026-08-25 — Licensed the repository, reusable skills and production documentation under Apache-2.0.
 
 ## Rejected directions
 
@@ -80,7 +81,6 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - Exact transition and insert needs after the first contact-sheet review.
 - Final motion model and shot durations.
 - Final narrator voice and sound design.
-- Public license for the reusable skills and repository.
 
 ## Out of scope
 
