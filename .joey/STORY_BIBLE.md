@@ -2,7 +2,7 @@
 
 ## Status
 
-Version 0.1. Approved inputs are limited to the festival track and the temporary visual DNA. The screenplay and every generated still remain Candidates until Yiannis approves them.
+Version 0.2. Approved inputs are limited to the festival track and the temporary visual DNA. Yiannis delegated the Still Pass 01 correction profile to the agent. The screenplay and every generated still remain Candidates until Yiannis approves them.
 
 ## Destination
 
@@ -45,12 +45,15 @@ Use the reference for:
 - raw observational realism;
 - soft natural window light;
 - low saturation and restrained contrast;
-- cool gray ambient light with warm worn wood and fiber;
+- cool gray ambient light with warm maintained wood and fiber;
 - tactile hands, fabric, dust, stone, paper and imperfect rooms;
+- cared-for surfaces with ordinary use instead of added grime or exaggerated distress;
 - candid gestures and quiet dignity;
 - a camera that witnesses rather than directs.
 
-Do not use the reference to make all people, homes or communities look alike. Do not copy the woman’s identity into unrelated scenes.
+Attach Weaver Candidate A as an image reference only for Shots 01–05 and 24. For Shots 06–23, translate these qualities into text and do not attach the image.
+
+Do not use the reference to make all people, homes or communities look alike. Do not copy the woman’s identity, clothing, room, loom, rustic material palette or social context into unrelated scenes.
 
 ## Frame and camera grammar
 
@@ -65,7 +68,7 @@ Do not use the reference to make all people, homes or communities look alike. Do
 
 ## Color and material palette
 
-- Weathered timber, undyed wool, faded cloth, limestone, earth plaster, paper, oxidized metal and seawater.
+- Maintained aged timber, undyed wool, faded cloth, limestone, earth plaster, paper, oxidized metal and seawater.
 - Charcoal, brown, gray, muted cream, faded rust and restrained blue-green.
 - Later scenes may gain slightly warmer skin tones and modest color, but the film must not become glossy or celebratory advertising.
 
@@ -91,6 +94,16 @@ A fictional child aged approximately 10–12 appears in Shots 03–05 and Shot 2
 
 All other people are fictional and community-specific. They appear as capable participants, not anonymous victims. Each location keeps its own architecture, clothing logic and material culture. Avoid generalized “traditional,” “tribal” or ceremonial styling.
 
+### Recurring fictional communities
+
+These communities are invented for the film. They are not substitutes for specific real peoples. Do not borrow recognizable sacred, national or ethnic identifiers.
+
+- **Coastal archive — Shots 06–08, 18 and 23:** a small salt-exposed island settlement; maintained gray local stone, dark timber shelving and muted blue-gray or moss contemporary rainwear.
+- **Language record — Shots 10, 17 and 22:** an inland household; a clean modest kitchen with pale plaster, dark timber, ordinary contemporary recording tools and muted ochre or green clothing.
+- **Return community — Shots 12, 14–16 and 21:** a dry upland settlement; a maintained limewashed cultural house with earth plaster, light timber and contemporary cream, rust or charcoal clothing.
+
+Shot 09 is a separate fictional dryland community. Shot 19 is a separate fictional coastal community and must not reuse the coastal archive location or people.
+
 ## Cultural representation rules
 
 - Do not recreate sacred ceremonies.
@@ -111,6 +124,7 @@ All other people are fictional and community-specific. They appear as capable pa
 - generic poverty imagery;
 - museum spectacle or triumphal return ceremony;
 - pristine sets without ordinary wear;
+- artificial grime, soot, mold, random stains or exaggerated distress;
 - crowds that hide the human action;
 - duplicated people, malformed hands or impossible loom mechanics;
 - visible brand marks, watermarks, captions or generated writing.
