@@ -7,8 +7,8 @@ A short AI film for the Higgsfield Global Film Festival, developed from the PNyx
 - Working title: **Many Stories**
 - Form: cinematic allegory, not a policy explainer
 - Target duration: **3:20–3:50**
-- Structure: **five movements**, approximately **20–24 shots**, one narrator
-- Emotional arc: inheritance → fragility → reframing → care → plurality
+- Structure: **five movements**, **24 shots**, one narrator
+- Emotional arc: inheritance → fragility → return → care → plurality
 - Closing line:  
   *“The world does not gain a single story. It gains a way to protect its many stories.”*
 
@@ -21,15 +21,35 @@ A short AI film for the Higgsfield Global Film Festival, developed from the PNyx
 
 This is the canonical submission-track decision for the project.
 
-## Initial visual candidates
+## Visual direction
 
-Both images were supplied for review on 25 August 2026. They are visual candidates; neither is approved yet.
+### Selected temporary visual DNA
 
-1. **Weaver candidate A** — elderly woman working at a domestic loom; raw, lived-in observational-documentary treatment.  
-   https://d8j0ntlcm91z4.cloudfront.net/user_3HbuSFrdCd0fV7j1hf3vlHB7UpQ/hf_20260825_194342_dca3e8e1-c15e-467d-994a-56a4d1fafefa_min.webp
+**Weaver Candidate A** was selected by Yiannis on 25 August 2026 for the complete first storyboard pass.
 
-2. **Weaver candidate B** — elderly woman working at a domestic loom; quieter, cleaner and more controlled treatment.  
-   https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3HbuSFrdCd0fV7j1hf3vlHB7UpQ%2Fhf_20260825_194342_3ceca46b-1052-4832-a3ee-4ce1a1cda70c.png&w=1920&q=85
+Use it to lock raw observational realism, natural window light, restrained color, tactile materials, lived-in spaces and quiet human gestures. Use the woman’s identity only in the Weaver continuity shots.
+
+https://d8j0ntlcm91z4.cloudfront.net/user_3HbuSFrdCd0fV7j1hf3vlHB7UpQ/hf_20260825_194342_dca3e8e1-c15e-467d-994a-56a4d1fafefa_min.webp
+
+### Unselected reference
+
+Weaver Candidate B remains an unselected reference. It is not Rejected and must not replace Candidate A during Still Pass 01.
+
+https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3HbuSFrdCd0fV7j1hf3vlHB7UpQ%2Fhf_20260825_194342_3ceca46b-1052-4832-a3ee-4ce1a1cda70c.png&w=1920&q=85
+
+## Production package
+
+- [Production map](.joey/PRODUCTION_MAP.md)
+- [Minimal story bible](.joey/STORY_BIBLE.md)
+- [Candidate screenplay](SCREENPLAY.md)
+- [Higgsfield Still Pass 01 — 24 prompts](prompts/STILL_PASS_01.md)
+
+## Public reusable skills
+
+The project publishes the reusable workflows that guide its production:
+
+- [Joey Workflow](skills/joey-workflow/SKILL.md) — dependency-driven AI-cinematic production with explicit human approval gates.
+- [Agent Technical English](skills/agent-technical-english/SKILL.md) — controlled language for precise agent instructions and execution contracts.
 
 ## Production constraints
 
@@ -38,7 +58,8 @@ Both images were supplied for review on 25 August 2026. They are visual candidat
 - Do not use identifiable real-person likenesses or voices.
 - Retain prompts, project files and generation history for 24 months.
 - Cinema Studio 4.0 is operated through production-ready prompts copied into the Studio.
+- Every Still Pass 01 image remains a Candidate until the complete contact-sheet review.
 
 ## Current frontier
 
-Lock the approximately 3.5-minute screenplay, then derive the production-ready shot list and first generation batch.
+Run the 24 prompts in the order defined in [Still Pass 01](prompts/STILL_PASS_01.md). Preserve every generation identifier. Review all 24 images together in one 6 × 4 contact sheet before using the 75-generation correction reserve.
