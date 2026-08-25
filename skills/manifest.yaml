@@ -51,7 +51,8 @@ decision_authority:
   silence_as_approval: prohibited
 
 reference_rules:
-  shared_textual_visual_dna_scope: Shots 01-24
+  project_visual_dna_scope: Shots 01-24
+  shared_textual_visual_dna_scope: Shots 06-23
   weaver_image_reference: Weaver Candidate A
   weaver_image_reference_scope: Shots 01-05 and 24
   weaver_identity_scope: Shots 01-05 and 24
