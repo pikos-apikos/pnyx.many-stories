@@ -27,7 +27,9 @@ loading_order:
 stage_routing:
   still_pass_01:
     contract: prompts/STILL_PASS_01.md
-    specialist: banana-pro-director-3.0
+    specialist: existing_project_prompt_contract
+    future_specialist: banana-pro-director-3.0
+    future_specialist_status: not_pinned_or_validated
     execution_surface: Higgsfield Cinema Studio festival project
     review_gate: complete 6x4 contact sheet
   video:
@@ -49,8 +51,14 @@ decision_authority:
   silence_as_approval: prohibited
 
 reference_rules:
-  global_style_reference: Weaver Candidate A
-  global_style_reference_scope: Shots 01-24
+  project_visual_dna_scope: Shots 01-24
+  shared_textual_visual_dna_scope: Shots 06-23
+  weaver_image_reference: Weaver Candidate A
+  weaver_image_reference_scope: Shots 01-05 and 24
   weaver_identity_scope: Shots 01-05 and 24
   weaver_candidate_b_status: unselected
-  correction_reserve: 75
+  provisional_candidate_references: permitted_inside_still_pass_01_only
+  dependent_shot_invalidation: required_after_material_anchor_change
+  base_generations: 24
+  technical_retry_limit: 8
+  creative_correction_reserve: 67

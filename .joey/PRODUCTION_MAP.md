@@ -20,7 +20,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 
 ## Pipeline
 
-- [ ] Minimal story bible — Candidate v0.1
+- [ ] Minimal story bible — Candidate v0.2
 - [ ] Character text locks — provisional inside Still Pass 01
 - [ ] Face locks — provisional storyboard anchors only
 - [ ] Base outfits
@@ -50,6 +50,9 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - **Status:** specified
 - **Decision owner:** HUMAN
 - **Prototype exception:** The user explicitly authorized a complete Candidate pass before individual approval. No output becomes Approved through this exception.
+- **In-pass reference exception:** A generated Candidate MAY be used as a provisional continuity anchor only inside Still Pass 01 and only for roles named in the prompt contract.
+- **Invalidation rule:** Replacing a provisional anchor reopens each dependent shot whose continuity changes materially.
+- **Generation budget:** 24 base generations, up to 8 technical-failure retries, and 67 creative correction generations held until contact-sheet review.
 
 ## Blocked
 
@@ -65,11 +68,16 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - 2026-08-25 — The first visual pass will cover the complete film before individual image approval.
 - 2026-08-25 — Every output in the first visual pass remains a **Candidate**. The pass does not create approved canon.
 - 2026-08-25 — Review the 24 Candidates together as one contact sheet.
-- 2026-08-25 — Allocate 24 of the 99 free generations to the complete first pass. Reserve 75 generations for continuity repairs, alternate compositions, missing inserts and final replacements.
+- 2026-08-25 — Allocate 24 of the 99 free generations to the complete first pass, up to 8 to documented technical failures, and 67 to post-review continuity repairs, alternate compositions, missing inserts and final replacements.
 - 2026-08-25 — Published Joey Workflow and Agent Technical English as reusable public skills in this repository.
 - 2026-08-25 — Removed one obsolete unsupported Joey frontmatter key before public validation. The workflow instructions did not change.
 - 2026-08-25 — Licensed the repository, reusable skills and production documentation under Apache-2.0.
 - 2026-08-25 — Pinned Controlled Cinematic English and added a Many Stories project adapter plus deterministic loading manifest.
+- 2026-08-25 — Yiannis delegated the Still Pass 01 correction-profile selection to the agent. Generated-image approval remains HUMAN.
+- 2026-08-25 — Shot 01 uses exact 16:9 image expansion. If expansion is unavailable inside the festival project, Shot 01 becomes Blocked.
+- 2026-08-25 — Attach Weaver Candidate A only for Shots 01–05 and 24. Shots 06–23 use shared textual visual DNA and no Weaver image input.
+- 2026-08-25 — Defined three visually distinct recurring fictional communities: coastal archive, language record and return community.
+- 2026-08-25 — Use `prompts/STILL_PASS_01.md` as the authoritative still specialist contract for this prototype. Do not claim Banana Pro Director validation until that skill is pinned and run.
 
 ## Rejected directions
 
@@ -77,6 +85,8 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - Automatic promotion of any first-pass image to Approved — the human owns all creative selections.
 - Spending all 99 generations before the first contact-sheet review — it removes the correction budget.
 - Generalized “traditional” or “tribal” styling — it collapses distinct communities into a cultural collage.
+- Attaching Weaver Candidate A to Shots 06–23 — it can leak the Weaver, room and rustic materials into unrelated communities.
+- Artificial grime or exaggerated distress — ordinary use must not become dirt, neglect or generic poverty.
 - Fantasy thread, mystical glow or luxury travel imagery — it breaks the approved observational realism.
 
 ## Not yet specified
