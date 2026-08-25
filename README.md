@@ -43,6 +43,7 @@ https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.c
 - [Minimal story bible](.joey/STORY_BIBLE.md)
 - [Candidate screenplay](SCREENPLAY.md)
 - [Higgsfield Still Pass 01 — 24 prompts](prompts/STILL_PASS_01.md)
+- [Skill loading manifest](skills/manifest.yaml)
 
 ## Public reusable skills
 
@@ -50,6 +51,8 @@ The project publishes the reusable workflows that guide its production:
 
 - [Joey Workflow](skills/joey-workflow/SKILL.md) — dependency-driven AI-cinematic production with explicit human approval gates.
 - [Agent Technical English](skills/agent-technical-english/SKILL.md) — controlled language for precise agent instructions and execution contracts.
+- [Controlled Cinematic English](skills/controlled-cinematic-english/SKILL.md) — cinematic intent compiler for ambiguity, reference roles and continuity.
+- [Many Stories CCE Adapter](skills/controlled-cinematic-english/MANY_STORIES_ADAPTER.md) — project-specific authority, canon and Still Pass rules.
 
 ## Production constraints
 
