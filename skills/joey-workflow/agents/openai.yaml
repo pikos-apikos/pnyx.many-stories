@@ -1,0 +1,17 @@
+interface:
+  display_name: joey workflow
+  short_description: Run Joey's reusable AI-cinematic production workflow as a persistent
+    production map, analogous to Wayfinder for filmmaking. Start from a loose film,
+    series, music-video, commercial, or cinematic-world idea; define the destination;
+    build and approve canonical assets in dependency order; keep candidates separate
+    from canon; and advance one human-approved frontier item at a time. Orchestrates
+    story-bible-builder, character-builder, banana-pro-director-3.0, and cinema-director.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
