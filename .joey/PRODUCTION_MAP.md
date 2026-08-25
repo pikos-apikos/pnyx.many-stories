@@ -13,6 +13,9 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - Still prompts: `prompts/STILL_PASS_01.md`
 - Public workflow: `skills/joey-workflow/SKILL.md`
 - Execution language: `skills/agent-technical-english/SKILL.md`
+- Cinematic intent compiler: `skills/controlled-cinematic-english/SKILL.md`
+- Project CCE adapter: `skills/controlled-cinematic-english/MANY_STORIES_ADAPTER.md`
+- Skill loading manifest: `skills/manifest.yaml`
 - Generation surface: Higgsfield Cinema Studio festival project
 
 ## Pipeline
@@ -66,6 +69,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - 2026-08-25 — Published Joey Workflow and Agent Technical English as reusable public skills in this repository.
 - 2026-08-25 — Removed one obsolete unsupported Joey frontmatter key before public validation. The workflow instructions did not change.
 - 2026-08-25 — Licensed the repository, reusable skills and production documentation under Apache-2.0.
+- 2026-08-25 — Pinned Controlled Cinematic English and added a Many Stories project adapter plus deterministic loading manifest.
 
 ## Rejected directions
 
