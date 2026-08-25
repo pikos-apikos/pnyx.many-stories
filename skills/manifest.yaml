@@ -1,0 +1,56 @@
+version: 1
+project: pikos-apikos/pnyx.many-stories
+license: Apache-2.0
+
+authority:
+  live_production_state: .joey/PRODUCTION_MAP.md
+  project_overview: README.md
+  candidate_story_bible: .joey/STORY_BIBLE.md
+  candidate_screenplay: SCREENPLAY.md
+
+loading_order:
+  - path: .joey/PRODUCTION_MAP.md
+    role: live production state and current frontier
+  - path: skills/agent-technical-english/SKILL.md
+    role: agent instructions, tool procedures and handoffs
+  - path: skills/controlled-cinematic-english/SKILL.md
+    role: cinematic intent, disambiguation and continuity compiler
+  - path: skills/controlled-cinematic-english/MANY_STORIES_ADAPTER.md
+    role: project-specific canon and reference-role adapter
+  - path: skills/joey-workflow/SKILL.md
+    role: dependency pipeline and approval gates
+  - path: .joey/STORY_BIBLE.md
+    role: current candidate world and visual rules
+  - path: SCREENPLAY.md
+    role: current candidate narration and shot order
+
+stage_routing:
+  still_pass_01:
+    contract: prompts/STILL_PASS_01.md
+    specialist: banana-pro-director-3.0
+    execution_surface: Higgsfield Cinema Studio festival project
+    review_gate: complete 6x4 contact sheet
+  video:
+    specialist: cinema-director
+    blocked_by: approved scene plates
+  audio_and_edit:
+    blocked_by: approved video takes and audio plan
+
+status_model:
+  - Candidate
+  - Approved
+  - Rejected
+  - Superseded
+  - Invalid
+
+decision_authority:
+  material_creative_decisions: HUMAN
+  automatic_candidate_promotion: prohibited
+  silence_as_approval: prohibited
+
+reference_rules:
+  global_style_reference: Weaver Candidate A
+  global_style_reference_scope: Shots 01-24
+  weaver_identity_scope: Shots 01-05 and 24
+  weaver_candidate_b_status: unselected
+  correction_reserve: 75
