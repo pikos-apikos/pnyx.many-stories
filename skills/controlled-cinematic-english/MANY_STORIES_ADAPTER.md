@@ -79,15 +79,17 @@ The agent MUST NOT:
 
 ### Weaver Candidate A
 
-Use Weaver Candidate A as:
+Attach Weaver Candidate A as an image reference for Shots 01–05 and 24 only.
 
-- `STYLE REFERENCE` for Shots 01–24;
-- `IDENTITY REFERENCE` for the Weaver in Shots 01–05 and 24 only;
-- `WARDROBE REFERENCE` for the Weaver in Shots 01–05 and 24 only;
-- `ENVIRONMENT REFERENCE` for the Weaver's room in Shots 01–05 and 24 only;
-- `PROP REFERENCE` for the Weaver's loom in Shots 01–05 and 24 only.
+Use it as:
 
-Do not copy the Weaver's identity, clothing, room or loom into Shots 06–23 unless a later explicit human decision changes the role map.
+- `STYLE REFERENCE` for Shots 01–05 and 24;
+- `IDENTITY REFERENCE` for the Weaver in Shots 01–05 and 24;
+- `WARDROBE REFERENCE` for the Weaver in Shots 01–05 and 24;
+- `ENVIRONMENT REFERENCE` for the Weaver's room in Shots 01–05 and 24;
+- `PROP REFERENCE` for the Weaver's loom in Shots 01–05 and 24.
+
+For Shots 06–23, use the shared textual visual DNA in `prompts/STILL_PASS_01.md`. Do not attach Weaver Candidate A. Do not copy the Weaver's identity, clothing, room, loom, rustic material palette or social context into unrelated communities.
 
 ### Weaver Candidate B
 
@@ -99,11 +101,16 @@ It is not Rejected. Do not use it unless the production map records a new human 
 
 ### Generated continuity anchors
 
+Still Pass 01 has an explicit in-pass Candidate-reference exception.
+
 When `prompts/STILL_PASS_01.md` names a previous shot as a reference:
 
-- use that shot only for the roles stated in the prompt;
+- use that Candidate only inside Still Pass 01;
+- use it only for the roles stated in the reference-role matrix and prompt;
 - preserve the named identity, location, wardrobe, prop or state;
-- do not infer additional canonical roles from the image.
+- do not infer additional canonical roles from the image;
+- do not promote the referenced Candidate to Approved;
+- if the anchor is replaced, reopen each dependent shot whose continuity changes materially.
 
 ## Continuity groups
 
@@ -116,6 +123,8 @@ When `prompts/STILL_PASS_01.md` names a previous shot as a reference:
 | Return community | 12, 14–16, 21 | guardian, community members, cultural house, returned textile |
 | Standalone climate and trade images | 09, 19, 20 | project visual DNA only unless the prompt defines another dependency |
 
+The coastal archive, language-record household and return community MUST use the distinct visual systems defined in `.joey/STORY_BIBLE.md`. Shot 09 and Shot 19 MUST remain separate from those recurring communities.
+
 ## Still Pass 01 execution contract
 
 `GOAL: Create one complete 24-frame storyboard Candidate set for contact-sheet review.`
@@ -126,18 +135,23 @@ When `prompts/STILL_PASS_01.md` names a previous shot as a reference:
 
 1. Generate the images in the recorded dependency order.
 2. Use 16:9 landscape output.
-3. Preserve every prompt and Higgsfield generation identifier.
-4. Keep every output in Candidate state.
-5. Complete all 24 technically usable frames.
-6. Review the 24 frames in one 6 × 4 contact sheet.
+3. Use exact image expansion for Shot 01. If expansion is unavailable inside the festival project, stop Shot 01.
+4. Attach Weaver Candidate A only for Shots 01–05 and 24.
+5. Use the shared textual visual DNA without a Weaver image input for Shots 06–23.
+6. Preserve every prompt and Higgsfield generation identifier.
+7. Keep every output in Candidate state.
+8. Complete all 24 technically usable frames.
+9. Review the 24 frames in one 6 × 4 contact sheet.
 
 The agent MUST NOT regenerate a creatively disappointing frame before the first complete review.
 
 The agent MAY regenerate a frame before the review only when the output is technically unusable. Record the failed generation and the reason.
 
-The first pass MAY use 24 generations.
+The base pass MAY use 24 generations.
 
-The remaining 75 generations are a correction reserve. Do not spend the reserve before the contact-sheet decision.
+Technical failures MAY use at most 8 additional generations before review.
+
+The remaining 67 generations are a creative correction reserve. Do not spend this reserve before the contact-sheet decision.
 
 `DONE WHEN: Yiannis can mark every frame Keep, Repair or Replace while viewing the complete sequence.`
 
@@ -180,6 +194,9 @@ Stop the affected generation when:
 - a prompt requires an unrecorded material creative choice;
 - a generated anchor changes identity, wardrobe, location or prop geometry materially;
 - a cultural representation risks combining unrelated or sacred material;
-- the requested action would use the correction reserve before contact-sheet review.
+- Shot 01 requires ordinary regeneration instead of exact in-project image expansion;
+- a prompt for Shots 06–23 would attach Weaver Candidate A;
+- the requested action would use the creative correction reserve before contact-sheet review;
+- more than eight technical-retry generations would be required before review.
 
 Report the exact blocked shot, unknown and required human decision.
