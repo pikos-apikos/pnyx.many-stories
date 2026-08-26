@@ -32,6 +32,33 @@ If `README.md`, the production map, the story bible, the screenplay or a prompt 
 
 CCE MUST NOT replace or rename a downstream specialist's prompt grammar.
 
+## Stateless image-model contract
+
+Nano Banana has no memory of an earlier shot, prompt, reference or visual rule.
+
+For every shot package in `prompts/STILL_PASS_01.md`:
+
+1. List every image that the operator MUST attach.
+2. State one canonical role for each property taken from each reference.
+3. Provide one self-contained prompt that the operator can copy without another text block.
+4. Provide result-handling instructions outside the model prompt.
+
+The prompt MUST contain every required textual visual rule.
+
+The prompt MUST refer only to images that the operator attaches for that shot.
+
+The prompt MUST NOT tell Nano Banana to preserve an output for a future shot.
+
+Result handling MUST state:
+
+- how to save and record the output;
+- which continuity properties to verify;
+- whether the output can serve as a provisional reference;
+- which dependent shots must stop if the output is technically unusable.
+
+A future dependency is an operator instruction. It is not a model instruction.
+
+
 ## Creative contract
 
 The film is a cinematic allegory based on the PNyX “Global Treaty for Cultural Heritage.”
@@ -133,15 +160,16 @@ The coastal archive, language-record household and return community MUST use the
 
 `DECISION OWNER: HUMAN`
 
-1. Generate the images in the recorded dependency order.
+1. Generate the images in the recorded continuity-group order.
 2. Use 16:9 landscape output.
 3. Use exact image expansion for Shot 01. If expansion is unavailable inside the festival project, stop Shot 01.
 4. Attach Weaver Candidate A only for Shots 01–05 and 24.
-5. Use the shared textual visual DNA without a Weaver image input for Shots 06–23.
-6. Preserve every prompt and Higgsfield generation identifier.
-7. Keep every output in Candidate state.
-8. Complete all 24 technically usable frames.
-9. Review the 24 frames in one 6 × 4 contact sheet.
+5. Use the self-contained prompt for each shot. For Shots 06–23, the prompt contains the shared textual visual DNA and uses no Weaver image input.
+6. For each shot, attach only the references listed in the runbook.
+7. Preserve every prompt and Higgsfield generation identifier.
+8. Keep every output in Candidate state.
+9. Complete all 24 technically usable frames.
+10. Review the 24 frames in one 6 × 4 contact sheet.
 
 The agent MUST NOT regenerate a creatively disappointing frame before the first complete review.
 

@@ -27,7 +27,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - [ ] Character sheets
 - [ ] Props
 - [ ] Empty environments
-- [ ] Scene plates — 24 Candidates specified
+- [ ] Scene plates — 24 Candidates generated; human selection pending
 - [ ] Video
 - [ ] Audio / edit
 
@@ -40,14 +40,14 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 
 ## Frontier
 
-### Complete Still Pass 01
+### Review Still Pass 01 contact sheet
 
 - **Canonical question:** Does the complete 24-frame sequence form one coherent visual film?
 - **Stage:** scene-plate prototype
-- **Dependencies:** Weaver Candidate A selected as temporary visual DNA
+- **Dependencies:** Twenty-four technically usable Still Pass 01 Candidates
 - **Inputs:** `.joey/STORY_BIBLE.md`, `SCREENPLAY.md`, `prompts/STILL_PASS_01.md`
-- **Acceptance criteria:** Twenty-four 16:9 images exist, each generation identifier is recorded, and one 6 × 4 contact sheet allows Keep / Repair / Replace review.
-- **Status:** specified
+- **Acceptance criteria:** Yiannis records one Keep / Repair / Replace decision for each of the 24 Candidates while viewing the complete 6 × 4 sequence.
+- **Status:** candidate
 - **Decision owner:** HUMAN
 - **Prototype exception:** The user explicitly authorized a complete Candidate pass before individual approval. No output becomes Approved through this exception.
 - **In-pass reference exception:** A generated Candidate MAY be used as a provisional continuity anchor only inside Still Pass 01 and only for roles named in the prompt contract.
@@ -56,7 +56,6 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 
 ## Blocked
 
-- Contact-sheet review — blocked by all 24 Still Pass 01 outputs.
 - Canonical story bible — blocked by the complete visual review.
 - Approved scene plates — blocked by Keep / Repair / Replace decisions.
 - Video prompts — blocked by approved scene plates.
@@ -78,6 +77,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - 2026-08-25 — Attach Weaver Candidate A only for Shots 01–05 and 24. Shots 06–23 use shared textual visual DNA and no Weaver image input.
 - 2026-08-25 — Defined three visually distinct recurring fictional communities: coastal archive, language record and return community.
 - 2026-08-25 — Use `prompts/STILL_PASS_01.md` as the authoritative still specialist contract for this prototype. Do not claim Banana Pro Director validation until that skill is pinned and run.
+- 2026-08-26 — Restructured Still Pass 01 as a stateless Nano Banana operator runbook: continuity groups, explicit reference attachments and roles, self-contained copy/paste prompts, and per-shot result handling.
 
 ## Rejected directions
 
