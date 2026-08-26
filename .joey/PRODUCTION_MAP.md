@@ -73,11 +73,12 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - 2026-08-25 — Licensed the repository, reusable skills and production documentation under Apache-2.0.
 - 2026-08-25 — Pinned Controlled Cinematic English and added a Many Stories project adapter plus deterministic loading manifest.
 - 2026-08-25 — Yiannis delegated the Still Pass 01 correction-profile selection to the agent. Generated-image approval remains HUMAN.
-- 2026-08-25 — Shot 01 uses exact 16:9 image expansion. If expansion is unavailable inside the festival project, Shot 01 becomes Blocked.
-- 2026-08-25 — Attach Weaver Candidate A only for Shots 01–05 and 24. Shots 06–23 use shared textual visual DNA and no Weaver image input.
+- 2026-08-25 — `A01` (film shot 01) uses exact 16:9 image expansion. If expansion is unavailable inside the festival project, `A01` becomes Blocked.
+- 2026-08-25 — Attach Weaver Candidate A only for Group A (`A01`–`A06`; film shots 01–05 and 24). Groups B–H use self-contained textual visual DNA and no Weaver image input.
 - 2026-08-25 — Defined three visually distinct recurring fictional communities: coastal archive, language record and return community.
 - 2026-08-25 — Use `prompts/STILL_PASS_01.md` as the authoritative still specialist contract for this prototype. Do not claim Banana Pro Director validation until that skill is pinned and run.
 - 2026-08-26 — Restructured Still Pass 01 as a stateless Nano Banana operator runbook: continuity groups, explicit reference attachments and roles, self-contained copy/paste prompts, and per-shot result handling.
+- 2026-08-26 — Adopted two-dimensional shot coordinates. The letter identifies the continuity group; the local two-digit number starts at 01 inside every group. Film-shot numbers remain edit-order metadata.
 
 ## Rejected directions
 
@@ -85,7 +86,7 @@ Produce a coherent 3:20–3:50 AI short film titled **Many Stories** for the Hig
 - Automatic promotion of any first-pass image to Approved — the human owns all creative selections.
 - Spending all 99 generations before the first contact-sheet review — it removes the correction budget.
 - Generalized “traditional” or “tribal” styling — it collapses distinct communities into a cultural collage.
-- Attaching Weaver Candidate A to Shots 06–23 — it can leak the Weaver, room and rustic materials into unrelated communities.
+- Attaching Weaver Candidate A to Groups B–H — it can leak the Weaver, room and rustic materials into unrelated communities.
 - Artificial grime or exaggerated distress — ordinary use must not become dirt, neglect or generic poverty.
 - Fantasy thread, mystical glow or luxury travel imagery — it breaks the approved observational realism.
 

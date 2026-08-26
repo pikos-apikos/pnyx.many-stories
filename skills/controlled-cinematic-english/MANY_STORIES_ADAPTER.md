@@ -106,17 +106,17 @@ The agent MUST NOT:
 
 ### Weaver Candidate A
 
-Attach Weaver Candidate A as an image reference for Shots 01–05 and 24 only.
+Attach Weaver Candidate A as an image reference for Group A (`A01`–`A06`) only.
 
 Use it as:
 
-- `STYLE REFERENCE` for Shots 01–05 and 24;
+- `STYLE REFERENCE` for Group A (`A01`–`A06`);
 - `IDENTITY REFERENCE` for the Weaver in Shots 01–05 and 24;
 - `WARDROBE REFERENCE` for the Weaver in Shots 01–05 and 24;
 - `ENVIRONMENT REFERENCE` for the Weaver's room in Shots 01–05 and 24;
 - `PROP REFERENCE` for the Weaver's loom in Shots 01–05 and 24.
 
-For Shots 06–23, use the shared textual visual DNA in `prompts/STILL_PASS_01.md`. Do not attach Weaver Candidate A. Do not copy the Weaver's identity, clothing, room, loom, rustic material palette or social context into unrelated communities.
+For Groups B–H, use the shared textual visual DNA in `prompts/STILL_PASS_01.md`. Do not attach Weaver Candidate A. Do not copy the Weaver's identity, clothing, room, loom, rustic material palette or social context into unrelated communities.
 
 ### Weaver Candidate B
 
@@ -130,7 +130,7 @@ It is not Rejected. Do not use it unless the production map records a new human 
 
 Still Pass 01 has an explicit in-pass Candidate-reference exception.
 
-When `prompts/STILL_PASS_01.md` names a previous shot as a reference:
+When `prompts/STILL_PASS_01.md` names a shot coordinate as a reference:
 
 - use that Candidate only inside Still Pass 01;
 - use it only for the roles stated in the reference-role matrix and prompt;
@@ -139,18 +139,22 @@ When `prompts/STILL_PASS_01.md` names a previous shot as a reference:
 - do not promote the referenced Candidate to Approved;
 - if the anchor is replaced, reopen each dependent shot whose continuity changes materially.
 
-## Continuity groups
+## Two-dimensional shot coordinates
 
-| Group | Shots | Required continuity |
-|---|---|---|
-| Weaver and Child | 01–05, 24 | Weaver identity, Child identity, clothing, loom, room, thread |
-| Coastal archive | 06–08, 18, 23 | two people, clothing, stone archive, shelf geometry, stored materials |
-| Language record | 10, 17, 22 | elder, younger relative, room, recording equipment |
-| Returned textile | 11, 13 | exact textile fragment and physical state |
-| Return community | 12, 14–16, 21 | guardian, community members, cultural house, returned textile |
-| Standalone climate and trade images | 09, 19, 20 | project visual DNA only unless the prompt defines another dependency |
+The letter identifies the continuity group. The two-digit number identifies the local shot position inside that group. Use the coordinate for generation files, reference attachments and result handling. Preserve the film-shot number only as edit-order metadata.
 
-The coastal archive, language-record household and return community MUST use the distinct visual systems defined in `.joey/STORY_BIBLE.md`. Shot 09 and Shot 19 MUST remain separate from those recurring communities.
+| Group | Coordinates | Film shots | Required continuity |
+|---|---|---|---|
+| Weaver and Child | A01–A06 | 01, 02, 03, 04, 05, 24 | Weaver identity, Child identity, clothing, loom, room, thread |
+| Coastal archive | B01–B05 | 06, 07, 08, 18, 23 | two people, clothing, stone archive, shelf geometry, stored materials |
+| Dryland threshold | C01 | 09 | standalone project visual DNA |
+| Language record | D01–D03 | 10, 17, 22 | elder, younger relative, room, recording equipment |
+| Returned textile | E01–E02 | 11, 13 | exact textile fragment and physical state |
+| Return community | F01–F05 | 12, 14, 15, 16, 21 | guardian, community members, cultural house, returned textile |
+| Moving threshold | G01 | 19 | standalone project visual DNA |
+| Trade | H01 | 20 | standalone project visual DNA |
+
+The coastal archive, language-record household and return community MUST use the distinct visual systems defined in `.joey/STORY_BIBLE.md`. `C01` and `G01` MUST remain separate from those recurring communities.
 
 ## Still Pass 01 execution contract
 
@@ -160,11 +164,11 @@ The coastal archive, language-record household and return community MUST use the
 
 `DECISION OWNER: HUMAN`
 
-1. Generate the images in the recorded continuity-group order.
+1. Generate each group from left to right. Generate the groups from A through H.
 2. Use 16:9 landscape output.
-3. Use exact image expansion for Shot 01. If expansion is unavailable inside the festival project, stop Shot 01.
-4. Attach Weaver Candidate A only for Shots 01–05 and 24.
-5. Use the self-contained prompt for each shot. For Shots 06–23, the prompt contains the shared textual visual DNA and uses no Weaver image input.
+3. Use exact image expansion for `A01`. If expansion is unavailable inside the festival project, stop `A01`.
+4. Attach Weaver Candidate A only for Group A (`A01`–`A06`).
+5. Use the self-contained prompt for each shot. For Groups B–H, the prompt contains the shared textual visual DNA and uses no Weaver image input.
 6. For each shot, attach only the references listed in the runbook.
 7. Preserve every prompt and Higgsfield generation identifier.
 8. Keep every output in Candidate state.
@@ -222,9 +226,9 @@ Stop the affected generation when:
 - a prompt requires an unrecorded material creative choice;
 - a generated anchor changes identity, wardrobe, location or prop geometry materially;
 - a cultural representation risks combining unrelated or sacred material;
-- Shot 01 requires ordinary regeneration instead of exact in-project image expansion;
-- a prompt for Shots 06–23 would attach Weaver Candidate A;
+- `A01` requires ordinary regeneration instead of exact in-project image expansion;
+- a prompt for Groups B–H would attach Weaver Candidate A;
 - the requested action would use the creative correction reserve before contact-sheet review;
 - more than eight technical-retry generations would be required before review.
 
-Report the exact blocked shot, unknown and required human decision.
+Report the exact blocked shot coordinate, unknown and required human decision.
