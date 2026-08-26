@@ -65,7 +65,7 @@ The project publishes the reusable workflows that guide its production:
 
 ## Current frontier
 
-Run the 24 prompts in the order defined in [Still Pass 01](prompts/STILL_PASS_01.md). Preserve every generation identifier. Review all 24 images together in one 6 × 4 contact sheet before using the 75-generation correction reserve.
+Review the 24 Still Pass 01 Candidates together in one 6 × 4 contact sheet. Yiannis owns every Keep / Repair / Replace decision. Use the stateless per-shot packages in [Still Pass 01](prompts/STILL_PASS_01.md) for any later technical retry or approved correction.
 
 ## License
 
