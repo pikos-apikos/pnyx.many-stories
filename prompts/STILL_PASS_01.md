@@ -18,7 +18,7 @@ For every shot:
 
 MUST NOT assume that Nano Banana remembers an earlier prompt, image, person, room, object or visual rule.
 
-MUST NOT attach Weaver Candidate A to Shots 06–23.
+MUST NOT attach Weaver Candidate A to Groups B–H.
 
 MUST NOT treat a future-shot dependency as a model instruction. Future dependencies belong only in **Result handling**.
 
@@ -29,33 +29,39 @@ MUST NOT treat a future-shot dependency as a model instruction. Future dependenc
 - If a technically usable result is creatively disappointing, keep it as a Candidate and continue to the complete contact-sheet review.
 - If a result is technically unusable, record the failure and reason. Do not use that result as a reference. Use a technical retry only within the recorded budget.
 
-## Execution order by continuity group
+## Two-dimensional shot matrix
 
-Run the groups and shots in this order:
+A shot coordinate has two parts:
 
-`A: 01 → 03 → 02 → 04 → 05 → 24`
+- The letter identifies the continuity group.
+- The two-digit number identifies the shot position inside that group.
 
-`B: 06 → 07 → 08 → 18 → 23`
+Use the coordinate in filenames, reference attachments and result handling. Use **Film shot** only to preserve the screenplay and edit order.
 
-`C: 09`
+| Group | Local sequence | Film shots |
+|---|---|---|
+| A | A01 → A02 → A03 → A04 → A05 → A06 | 01, 02, 03, 04, 05, 24 |
+| B | B01 → B02 → B03 → B04 → B05 | 06, 07, 08, 18, 23 |
+| C | C01 | 09 |
+| D | D01 → D02 → D03 | 10, 17, 22 |
+| E | E01 → E02 | 11, 13 |
+| F | F01 → F02 → F03 → F04 → F05 | 12, 14, 15, 16, 21 |
+| G | G01 | 19 |
+| H | H01 | 20 |
 
-`D: 10 → 17 → 22`
-
-`E: 11 → 13`
-
-`F: 12 → 14 → 15 → 16 → 21`
-
-`G: 19`
-
-`H: 20`
-
-Group F has one cross-group dependency: complete a technically usable Shot 13 before Shots 14 and 15.
+Run each group from left to right. Run the groups from A through H. Do not infer continuity between different groups. Attach only the reference coordinates listed in each shot package.
 
 ## Group A — Weaver and Child
 
+Local sequence: `A01 → A02 → A03 → A04 → A05 → A06`
+
+Film-shot mapping: `A01 = 01`; `A02 = 02`; `A03 = 03`; `A04 = 04`; `A05 = 05`; `A06 = 24`.
+
 Build the Weaver room, lock the Child, complete the hand details, and return to the room for the closing frame.
 
-### Shot 01 — THE ROOM REMEMBERS
+### A01 — THE ROOM REMEMBERS
+
+**Film shot:** `01`
 
 #### 1. References to attach
 
@@ -70,125 +76,141 @@ OUTPUT MODE: Create a 16:9 image expansion/outpaint from the supplied Weaver ref
 #### 3. Result handling
 
 - Download the original result as `01_<generation-id>.png`.
-- Record Shot 01, the exact prompt and the Higgsfield generation identifier.
+- Record A01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify exact source-pixel preservation, Weaver identity, wardrobe, room, loom and 16:9 expansion. If the tool regenerated the source instead of expanding it, record a technical failure and stop this group.
-- If technically usable, make it available as a provisional reference for Shots 02, 03, 04 and 24.
+- If technically usable, make it available as a provisional reference for coordinates A02, A03, A04 and A06.
 
-### Shot 03 — AT THE THRESHOLD
+### A02 — TENSION
 
-#### 1. References to attach
-
-- Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver.
-- Attach **Shot 01 Candidate** — ENVIRONMENT REFERENCE for the room; PROP REFERENCE for the loom; STYLE REFERENCE for framing and light.
-
-#### 2. Prompt to paste
-
-```text
-Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied Shot 01 reference image for the room, loom, light and observational image language. Preserve the same elderly woman at the same loom. Add one fictional child aged 10–12 standing quietly in the open interior doorway behind the loom. Give the child ordinary contemporary clothes in muted charcoal and faded blue. The child watches without smiling or posing. Keep the Child’s face and clothing specific and clearly visible. Frame from slightly behind the loom at eye level with a plausible 35 mm lens. Keep the Weaver focused on her work. Use soft winter daylight, low saturation, maintained aged wood, tactile fiber and subtle natural film grain. Do not make the child resemble a celebrity or identifiable real person. Do not use folklore costume, sentimental staging, text, logos, extra people, malformed hands or fantasy lighting.
-```
-
-#### 3. Result handling
-
-- Download the original result as `03_<generation-id>.png`.
-- Record Shot 03, the exact prompt and the Higgsfield generation identifier.
-- Keep the result in **Candidate** state. Do not mark it Approved.
-- Verify Weaver continuity, room and loom continuity, and one clear Child identity in the locked muted clothing.
-- If technically usable, make it available as a provisional Child reference for Shots 04, 05 and 24.
-
-### Shot 02 — TENSION
+**Film shot:** `02`
 
 #### 1. References to attach
 
 - Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver.
-- Attach **Shot 01 Candidate** — PROP REFERENCE for the loom; ENVIRONMENT REFERENCE for the room; STYLE REFERENCE for framing, light and surface treatment.
+- Attach **A01 Candidate** — PROP REFERENCE for the loom; ENVIRONMENT REFERENCE for the room; STYLE REFERENCE for framing, light and surface treatment.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied Shot 01 reference image for the loom, room, light and observational image language. Show a close observational view of the same elderly woman’s hands guiding the wooden shuttle through the loom and maintaining tension in the gray natural thread. Preserve her patterned fleece sleeves, aged hands and the exact aged loom construction shown in the references. Do not add dirt or new damage. Use a physically plausible 50 mm close frame with enough context to understand the action. Use soft window light, low saturation, warm maintained wood with ordinary use, cool gray shadow and subtle natural film grain. The hands must perform one clear weaving action. Do not show her face. Do not create decorative fantasy thread, perfect commercial craft photography, extra fingers, duplicated tools, impossible thread paths, text, logos or watermarks.
+Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied A01 reference image for the loom, room, light and observational image language. Show a close observational view of the same elderly woman’s hands guiding the wooden shuttle through the loom and maintaining tension in the gray natural thread. Preserve her patterned fleece sleeves, aged hands and the exact aged loom construction shown in the references. Do not add dirt or new damage. Use a physically plausible 50 mm close frame with enough context to understand the action. Use soft window light, low saturation, warm maintained wood with ordinary use, cool gray shadow and subtle natural film grain. The hands must perform one clear weaving action. Do not show her face. Do not create decorative fantasy thread, perfect commercial craft photography, extra fingers, duplicated tools, impossible thread paths, text, logos or watermarks.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `02_<generation-id>.png`.
-- Record Shot 02, the exact prompt and the Higgsfield generation identifier.
+- Record A02, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify one mechanically plausible weaving action, correct hands, sleeves, loom, shuttle and thread path.
-- If technically usable, make it available as a provisional reference for Shot 05.
+- If technically usable, make it available as a provisional reference for A05.
 
-### Shot 04 — LISTENING
+### A03 — AT THE THRESHOLD
+
+**Film shot:** `03`
 
 #### 1. References to attach
 
 - Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver.
-- Attach **Shot 01 Candidate** — ENVIRONMENT, PROP and STYLE REFERENCE for the room, loom and light.
-- Attach **Shot 03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child; COMPOSITION REFERENCE for the Child's scale in the room.
+- Attach **A01 Candidate** — ENVIRONMENT REFERENCE for the room; PROP REFERENCE for the loom; STYLE REFERENCE for framing and light.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied Shot 01 reference image for the room, loom and light. Use the supplied Shot 03 reference image for the Child's identity, wardrobe and scale. Preserve the same Weaver, Child, clothing, loom and room. Show the Child seated nearby and listening while the Weaver continues to work and speaks naturally without turning toward the camera. The moment must feel incidental, not staged as a formal lesson. Frame both people in a quiet eye-level medium-wide composition with a plausible 35 mm lens. Let the loom partially separate them while their attention connects them. Use soft window light, low saturation, cool gray ambient light, warm maintained wood with ordinary use and subtle film grain. Keep expressions restrained. Do not show exaggerated speaking, theatrical emotion, direct eye contact with camera, folklore costume, text, logos, duplicated people, extra fingers or impossible loom geometry.
+Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied A01 reference image for the room, loom, light and observational image language. Preserve the same elderly woman at the same loom. Add one fictional child aged 10–12 standing quietly in the open interior doorway behind the loom. Give the child ordinary contemporary clothes in muted charcoal and faded blue. The child watches without smiling or posing. Keep the Child’s face and clothing specific and clearly visible. Frame from slightly behind the loom at eye level with a plausible 35 mm lens. Keep the Weaver focused on her work. Use soft winter daylight, low saturation, maintained aged wood, tactile fiber and subtle natural film grain. Do not make the child resemble a celebrity or identifiable real person. Do not use folklore costume, sentimental staging, text, logos, extra people, malformed hands or fantasy lighting.
+```
+
+#### 3. Result handling
+
+- Download the original result as `03_<generation-id>.png`.
+- Record A03, the exact prompt and the Higgsfield generation identifier.
+- Keep the result in **Candidate** state. Do not mark it Approved.
+- Verify Weaver continuity, room and loom continuity, and one clear Child identity in the locked muted clothing.
+- If technically usable, make it available as a provisional Child reference for coordinates A04, A05 and A06.
+
+### A04 — LISTENING
+
+**Film shot:** `04`
+
+#### 1. References to attach
+
+- Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver.
+- Attach **A01 Candidate** — ENVIRONMENT, PROP and STYLE REFERENCE for the room, loom and light.
+- Attach **A03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child; COMPOSITION REFERENCE for the Child's scale in the room.
+
+#### 2. Prompt to paste
+
+```text
+Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied A01 reference image for the room, loom and light. Use the supplied A03 reference image for the Child's identity, wardrobe and scale. Preserve the same Weaver, Child, clothing, loom and room. Show the Child seated nearby and listening while the Weaver continues to work and speaks naturally without turning toward the camera. The moment must feel incidental, not staged as a formal lesson. Frame both people in a quiet eye-level medium-wide composition with a plausible 35 mm lens. Let the loom partially separate them while their attention connects them. Use soft window light, low saturation, cool gray ambient light, warm maintained wood with ordinary use and subtle film grain. Keep expressions restrained. Do not show exaggerated speaking, theatrical emotion, direct eye contact with camera, folklore costume, text, logos, duplicated people, extra fingers or impossible loom geometry.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `04_<generation-id>.png`.
-- Record Shot 04, the exact prompt and the Higgsfield generation identifier.
+- Record A04, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify both identities, both wardrobes, room, loom, eyelines and restrained incidental interaction.
 - Do not promote the result to Approved. Continue only after the continuity checks pass.
 
-### Shot 05 — THE LOOSE END
+### A05 — THE LOOSE END
+
+**Film shot:** `05`
 
 #### 1. References to attach
 
 - Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver.
-- Attach **Shot 02 Candidate** — BODY REFERENCE for the Weaver's hands and sleeves; PROP REFERENCE for the loom, shuttle and thread.
-- Attach **Shot 03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child.
+- Attach **A02 Candidate** — BODY REFERENCE for the Weaver's hands and sleeves; PROP REFERENCE for the loom, shuttle and thread.
+- Attach **A03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied Shot 02 reference image for her hands, sleeves, loom, shuttle and thread. Use the supplied Shot 03 reference image for the Child's identity and wardrobe. Preserve the same Weaver, Child, sleeves, hands, loom and thread. Show the Weaver placing the Child’s hand beside one loose gray thread at the edge of the unfinished cloth. The Child’s fingers hover and do not pull yet. Frame only the two sets of hands, part of the loom and a small glimpse of their bodies. Use a plausible 50 mm close documentary composition. Keep the action mechanically clear and emotionally restrained. Use soft natural window light, low saturation, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Do not create hand-holding sentimentality, glowing thread, extra fingers, merged hands, duplicated thread, jewelry, text, logos or commercial craft styling.
+Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied A02 reference image for her hands, sleeves, loom, shuttle and thread. Use the supplied A03 reference image for the Child's identity and wardrobe. Preserve the same Weaver, Child, sleeves, hands, loom and thread. Show the Weaver placing the Child’s hand beside one loose gray thread at the edge of the unfinished cloth. The Child’s fingers hover and do not pull yet. Frame only the two sets of hands, part of the loom and a small glimpse of their bodies. Use a plausible 50 mm close documentary composition. Keep the action mechanically clear and emotionally restrained. Use soft natural window light, low saturation, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Do not create hand-holding sentimentality, glowing thread, extra fingers, merged hands, duplicated thread, jewelry, text, logos or commercial craft styling.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `05_<generation-id>.png`.
-- Record Shot 05, the exact prompt and the Higgsfield generation identifier.
+- Record A05, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify both sets of hands, sleeve continuity, one loose thread and mechanically plausible contact with the loom.
-- If technically usable, make it available as a provisional hands, thread and loom reference for Shot 24.
+- If technically usable, make it available as a provisional hands, thread and loom reference for A06.
 
-### Shot 24 — THE NEXT HANDS
+### A06 — THE NEXT HANDS
+
+**Film shot:** `24`
 
 #### 1. References to attach
 
 - Attach **Weaver Candidate A** — IDENTITY and WARDROBE REFERENCE for the Weaver; ENVIRONMENT REFERENCE for the room; PROP REFERENCE for the loom.
-- Attach **Shot 01 Candidate** — ENVIRONMENT and STYLE REFERENCE for the room, light and framing.
-- Attach **Shot 03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child.
-- Attach **Shot 05 Candidate** — BODY and PROP REFERENCE for hands, thread, shuttle and unfinished cloth.
+- Attach **A01 Candidate** — ENVIRONMENT and STYLE REFERENCE for the room, light and framing.
+- Attach **A03 Candidate** — IDENTITY and WARDROBE REFERENCE for the Child.
+- Attach **A05 Candidate** — BODY and PROP REFERENCE for hands, thread, shuttle and unfinished cloth.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied Shot 01 reference image for the room, loom, light and observational image language. Use the supplied Shot 03 reference image for the Child's identity and wardrobe. Use the supplied Shot 05 reference image for the hands, thread, shuttle and unfinished cloth. Return to the same soft winter daylight. Show the Child now seated at the loom and operating the wooden shuttle carefully. The Weaver sits nearby in profile and watches without correcting every movement. The cloth remains visibly unfinished and several loose natural threads remain separate at its edge. Frame an eye-level medium-wide 35 mm composition with quiet breathing space. Use low saturation, cool gray ambient light, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Do not show triumph, a staged smile, magical thread, perfect finished cloth, direct eye contact with camera, text, logos, extra fingers, duplicated hands or impossible loom geometry.
+Create one photoreal 16:9 landscape documentary still. Use the supplied Weaver reference image for the Weaver's identity and wardrobe. Use the supplied A01 reference image for the room, loom, light and observational image language. Use the supplied A03 reference image for the Child's identity and wardrobe. Use the supplied A05 reference image for the hands, thread, shuttle and unfinished cloth. Return to the same soft winter daylight. Show the Child now seated at the loom and operating the wooden shuttle carefully. The Weaver sits nearby in profile and watches without correcting every movement. The cloth remains visibly unfinished and several loose natural threads remain separate at its edge. Frame an eye-level medium-wide 35 mm composition with quiet breathing space. Use low saturation, cool gray ambient light, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Do not show triumph, a staged smile, magical thread, perfect finished cloth, direct eye contact with camera, text, logos, extra fingers, duplicated hands or impossible loom geometry.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `24_<generation-id>.png`.
-- Record Shot 24, the exact prompt and the Higgsfield generation identifier.
+- Record A06, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify exact Weaver and Child continuity, room, loom, shuttle, unfinished cloth and separate loose threads; verify the ending remains quiet and unperformed.
 - Keep the result as the closing-frame Candidate for contact-sheet review. Do not promote it to Approved.
 
 ## Group B — Coastal archive
 
+Local sequence: `B01 → B02 → B03 → B04 → B05`
+
+Film-shot mapping: `B01 = 06`; `B02 = 07`; `B03 = 08`; `B04 = 18`; `B05 = 23`.
+
 Build one fictional coastal archive and reuse only its named people, clothing, architecture and archive state.
 
-### Shot 06 — THE TIDE LINE
+### B01 — THE TIDE LINE
+
+**Film shot:** `06`
 
 #### 1. References to attach
 
@@ -203,101 +225,115 @@ Create one photoreal 16:9 landscape observational-documentary still. Use raw obs
 #### 3. Result handling
 
 - Download the original result as `06_<generation-id>.png`.
-- Record Shot 06, the exact prompt and the Higgsfield generation identifier.
+- Record B01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify that the people and archive are distinct from the Weaver group, contemporary, cared for and visually specific. If identity or location is unusable, record a technical failure and stop this group.
-- If technically usable, make it the provisional coastal-archive anchor for Shots 07, 08, 18 and 23.
+- If technically usable, make it the provisional coastal-archive anchor for coordinates B02, B03, B04 and B05.
 
-### Shot 07 — WATER INSIDE
+### B02 — WATER INSIDE
+
+**Film shot:** `07`
 
 #### 1. References to attach
 
-- Attach **Shot 06 Candidate** — IDENTITY and WARDROBE REFERENCE for the older woman and young adult; ENVIRONMENT REFERENCE for the coastal archive.
+- Attach **B01 Candidate** — IDENTITY and WARDROBE REFERENCE for the older woman and young adult; ENVIRONMENT REFERENCE for the coastal archive.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 06 reference image for the exact coastal archive, older woman, young adult and clothing. Inside the same stone archive, show a thin layer of seawater crossing the floor while the two people lift plain archival boxes from a low shelf. Their action is coordinated and practical, not panicked. Frame an eye-level medium-wide view with a plausible 35 mm lens. Show paper boxes, folded cloth and simple recording media without readable labels. Use soft gray daylight from the doorway, low saturation, wet stone reflections, maintained timber with ordinary age and subtle film grain. Do not add flood spectacle, collapsing walls, rescue uniforms, dramatic hero poses, readable text, logos, duplicated boxes, malformed hands or impossible water behavior.
+Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied B01 reference image for the exact coastal archive, older woman, young adult and clothing. Inside the same stone archive, show a thin layer of seawater crossing the floor while the two people lift plain archival boxes from a low shelf. Their action is coordinated and practical, not panicked. Frame an eye-level medium-wide view with a plausible 35 mm lens. Show paper boxes, folded cloth and simple recording media without readable labels. Use soft gray daylight from the doorway, low saturation, wet stone reflections, maintained timber with ordinary age and subtle film grain. Do not add flood spectacle, collapsing walls, rescue uniforms, dramatic hero poses, readable text, logos, duplicated boxes, malformed hands or impossible water behavior.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `07_<generation-id>.png`.
-- Record Shot 07, the exact prompt and the Higgsfield generation identifier.
+- Record B02, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same two people, clothing and archive; verify shallow plausible water, coordinated box handling and unreadable labels.
-- If technically usable, make it available as a provisional archive-state and materials reference for Shots 08 and 18.
+- If technically usable, make it available as a provisional archive-state and materials reference for coordinates B03 and B04.
 
-### Shot 08 — ABOVE THE WATER
+### B03 — ABOVE THE WATER
+
+**Film shot:** `08`
 
 #### 1. References to attach
 
-- Attach **Shot 06 Candidate** — IDENTITY and WARDROBE REFERENCE for the two people; ENVIRONMENT REFERENCE for the archive.
-- Attach **Shot 07 Candidate** — PROP REFERENCE for the boxes, cloth and recording media; ENVIRONMENT REFERENCE for the water level and archive response.
+- Attach **B01 Candidate** — IDENTITY and WARDROBE REFERENCE for the two people; ENVIRONMENT REFERENCE for the archive.
+- Attach **B02 Candidate** — PROP REFERENCE for the boxes, cloth and recording media; ENVIRONMENT REFERENCE for the water level and archive response.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 06 reference image for the coastal archive, people and clothing. Use the supplied Shot 07 reference image for the boxes, cloth, recording media and water state. Show a close practical action: the older woman’s and young adult’s hands place one archival box, a small reel recorder, several photographs turned face-down and one folded cloth on the highest temporary wooden shelf. A thin layer of seawater remains visible far below. Use a plausible 50 mm close frame with clear shelf geometry. Use soft gray daylight, low saturation, tactile paper, cloth, oxidized metal, wet stone and subtle film grain. Do not show readable writing, visible photograph faces, sacred objects, panic, glowing water, extra fingers, duplicated items, text, logos or glossy disaster photography.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied B01 reference image for the coastal archive, people and clothing. Use the supplied B02 reference image for the boxes, cloth, recording media and water state. Show a close practical action: the older woman’s and young adult’s hands place one archival box, a small reel recorder, several photographs turned face-down and one folded cloth on the highest temporary wooden shelf. A thin layer of seawater remains visible far below. Use a plausible 50 mm close frame with clear shelf geometry. Use soft gray daylight, low saturation, tactile paper, cloth, oxidized metal, wet stone and subtle film grain. Do not show readable writing, visible photograph faces, sacred objects, panic, glowing water, extra fingers, duplicated items, text, logos or glossy disaster photography.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `08_<generation-id>.png`.
-- Record Shot 08, the exact prompt and the Higgsfield generation identifier.
+- Record B03, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same people, archive and materials; verify photographs are face-down, the shelf geometry is plausible and no text is readable.
-- If technically usable, make it available as a provisional stored-materials reference for Shots 18 and 23.
+- If technically usable, make it available as a provisional stored-materials reference for coordinates B04 and B05.
 
-### Shot 18 — A ROOM PREPARED FOR WATER
+### B04 — A ROOM PREPARED FOR WATER
+
+**Film shot:** `18`
 
 #### 1. References to attach
 
-- Attach **Shot 06 Candidate** — IDENTITY and WARDROBE REFERENCE for the two people; ENVIRONMENT REFERENCE for the archive exterior and location.
-- Attach **Shot 07 Candidate** — ENVIRONMENT REFERENCE for the archive interior and its water-entry condition.
-- Attach **Shot 08 Candidate** — PROP REFERENCE for the stored materials and high-shelf organization.
+- Attach **B01 Candidate** — IDENTITY and WARDROBE REFERENCE for the two people; ENVIRONMENT REFERENCE for the archive exterior and location.
+- Attach **B02 Candidate** — ENVIRONMENT REFERENCE for the archive interior and its water-entry condition.
+- Attach **B03 Candidate** — PROP REFERENCE for the stored materials and high-shelf organization.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 06 reference image for the exact coastal archive exterior, older woman, young adult and clothing. Use the supplied Shot 07 reference image for the archive interior after water entry. Use the supplied Shot 08 reference image for the stored materials and high-shelf organization. Show the same interior after practical adaptation: archival shelves are permanently raised above a floodable stone floor, boxes are orderly but not pristine, and simple ventilation openings are visible. The older woman and young adult inspect the room together after a small tide has receded. Frame an eye-level wide 35 mm shot that clearly explains the raised geometry. Use soft gray daylight, low saturation, damp stone, maintained timber with ordinary age and subtle film grain. Do not create a futuristic renovation, luxury design, disaster spectacle, readable labels, flags, logos, extra people, malformed architecture or impossible water reflections.
+Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied B01 reference image for the exact coastal archive exterior, older woman, young adult and clothing. Use the supplied B02 reference image for the archive interior after water entry. Use the supplied B03 reference image for the stored materials and high-shelf organization. Show the same interior after practical adaptation: archival shelves are permanently raised above a floodable stone floor, boxes are orderly but not pristine, and simple ventilation openings are visible. The older woman and young adult inspect the room together after a small tide has receded. Frame an eye-level wide 35 mm shot that clearly explains the raised geometry. Use soft gray daylight, low saturation, damp stone, maintained timber with ordinary age and subtle film grain. Do not create a futuristic renovation, luxury design, disaster spectacle, readable labels, flags, logos, extra people, malformed architecture or impossible water reflections.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `18_<generation-id>.png`.
-- Record Shot 18, the exact prompt and the Higgsfield generation identifier.
+- Record B04, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same coastal people and archive; verify raised shelves, ventilation and floodable-floor geometry are physically plausible.
-- If technically usable, make it available as a provisional adapted-interior reference for Shot 23.
+- If technically usable, make it available as a provisional adapted-interior reference for B05.
 
-### Shot 23 — THE HOUSE IS ALIVE
+### B05 — THE HOUSE IS ALIVE
+
+**Film shot:** `23`
 
 #### 1. References to attach
 
-- Attach **Shot 06 Candidate** — IDENTITY and WARDROBE REFERENCE for the older woman and young adult; ENVIRONMENT REFERENCE for the coastal archive.
-- Attach **Shot 08 Candidate** — PROP REFERENCE for the archival boxes, photographs and raised storage.
-- Attach **Shot 18 Candidate** — ENVIRONMENT REFERENCE for the adapted raised-shelf interior and its dry operational condition.
+- Attach **B01 Candidate** — IDENTITY and WARDROBE REFERENCE for the older woman and young adult; ENVIRONMENT REFERENCE for the coastal archive.
+- Attach **B03 Candidate** — PROP REFERENCE for the archival boxes, photographs and raised storage.
+- Attach **B04 Candidate** — ENVIRONMENT REFERENCE for the adapted raised-shelf interior and its dry operational condition.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 06 reference image for the exact coastal people, clothing and archive. Use the supplied Shot 08 reference image for the archival boxes, photographs and raised storage. Use the supplied Shot 18 reference image for the adapted raised-shelf interior. Show the room active in ordinary present-day life: two children look through reproduced photographs, the older woman speaks with another adult, and the young adult checks an archival box on a raised shelf. Keep all visible images and notes unreadable. Frame an eye-level wide 35 mm shot with several small actions but no crowd. Use soft late-afternoon daylight, slightly warmer skin tones, low saturation, stone and maintained timber with ordinary age and subtle film grain. Do not stage a festival, museum tour or classroom lesson. Do not show costumes, banners, text, logos, posing, duplicated people or malformed hands.
+Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied B01 reference image for the exact coastal people, clothing and archive. Use the supplied B03 reference image for the archival boxes, photographs and raised storage. Use the supplied B04 reference image for the adapted raised-shelf interior. Show the room active in ordinary present-day life: two children look through reproduced photographs, the older woman speaks with another adult, and the young adult checks an archival box on a raised shelf. Keep all visible images and notes unreadable. Frame an eye-level wide 35 mm shot with several small actions but no crowd. Use soft late-afternoon daylight, slightly warmer skin tones, low saturation, stone and maintained timber with ordinary age and subtle film grain. Do not stage a festival, museum tour or classroom lesson. Do not show costumes, banners, text, logos, posing, duplicated people or malformed hands.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `23_<generation-id>.png`.
-- Record Shot 23, the exact prompt and the Higgsfield generation identifier.
+- Record B05, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same coastal people and adapted archive, dry and safe material handling, ordinary activity, unreadable images and no crowd.
 - Keep the result as a Candidate for contact-sheet review. Do not promote it to Approved.
 
 ## Group C — Dryland threshold
 
+Local sequence: `C01`
+
+Film-shot mapping: `C01 = 09`.
+
 Create one standalone fictional dryland community. Do not import continuity from another group.
 
-### Shot 09 — SAND AT THE DOOR
+### C01 — SAND AT THE DOOR
+
+**Film shot:** `09`
 
 #### 1. References to attach
 
@@ -312,16 +348,22 @@ Create one photoreal 16:9 landscape observational-documentary still. Use raw obs
 #### 3. Result handling
 
 - Download the original result as `09_<generation-id>.png`.
-- Record Shot 09, the exact prompt and the Higgsfield generation identifier.
+- Record C01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify a distinct fictional dryland community, an actively used threshold, ordinary contemporary clothing and no sacred or borrowed motifs.
 - Keep the result as a standalone Candidate. Do not reuse its people or location in another continuity group.
 
 ## Group D — Language record
 
+Local sequence: `D01 → D02 → D03`
+
+Film-shot mapping: `D01 = 10`; `D02 = 17`; `D03 = 22`.
+
 Build one inland household and preserve its people, room and locally controlled recording setup.
 
-### Shot 10 — THE LAST FLUENT VOICE
+### D01 — THE LAST FLUENT VOICE
+
+**Film shot:** `10`
 
 #### 1. References to attach
 
@@ -336,57 +378,67 @@ Create one photoreal 16:9 landscape documentary still. Use raw observational-doc
 #### 3. Result handling
 
 - Download the original result as `10_<generation-id>.png`.
-- Record Shot 10, the exact prompt and the Higgsfield generation identifier.
+- Record D01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify a distinct elder, younger relative, clothing, kitchen and consent-centered recording setup. If identity or room is unusable, record a technical failure and stop this group.
-- If technically usable, make it the provisional language-record anchor for Shots 17 and 22.
+- If technically usable, make it the provisional language-record anchor for coordinates D02 and D03.
 
-### Shot 17 — THE COMMUNITY RECORDS ITSELF
+### D02 — THE COMMUNITY RECORDS ITSELF
+
+**Film shot:** `17`
 
 #### 1. References to attach
 
-- Attach **Shot 10 Candidate** — IDENTITY and WARDROBE REFERENCE for the elder and younger relative; ENVIRONMENT REFERENCE for the kitchen; PROP REFERENCE for the recording setup.
+- Attach **D01 Candidate** — IDENTITY and WARDROBE REFERENCE for the elder and younger relative; ENVIRONMENT REFERENCE for the kitchen; PROP REFERENCE for the recording setup.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 10 reference image for the exact elderly speaker, younger relative, clothing, kitchen and recording setup. Add one fictional local archivist of similar community context. Show the archivist operating a simple field recorder while the younger relative logs the session on a modest laptop with the screen turned away and unreadable. The elderly speaker talks naturally and remains in control of the exchange. Frame an intimate eye-level 35 mm three-person composition. Use soft side-window light, low saturation, ordinary domestic wear and subtle film grain. Do not show an outsider research team, surveillance, studio glamour, staged smiles, readable notes, screen content, logos, flags, extra equipment, duplicated people or celebrity likenesses.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied D01 reference image for the exact elderly speaker, younger relative, clothing, kitchen and recording setup. Add one fictional local archivist of similar community context. Show the archivist operating a simple field recorder while the younger relative logs the session on a modest laptop with the screen turned away and unreadable. The elderly speaker talks naturally and remains in control of the exchange. Frame an intimate eye-level 35 mm three-person composition. Use soft side-window light, low saturation, ordinary domestic wear and subtle film grain. Do not show an outsider research team, surveillance, studio glamour, staged smiles, readable notes, screen content, logos, flags, extra equipment, duplicated people or celebrity likenesses.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `17_<generation-id>.png`.
-- Record Shot 17, the exact prompt and the Higgsfield generation identifier.
+- Record D02, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same elder, younger relative, clothing and kitchen; verify the archivist belongs to the same fictional community and all screens are unreadable.
-- If technically usable, make it available as a provisional locally controlled recording reference for Shot 22.
+- If technically usable, make it available as a provisional locally controlled recording reference for D03.
 
-### Shot 22 — A LIVING VOICE
+### D03 — A LIVING VOICE
+
+**Film shot:** `22`
 
 #### 1. References to attach
 
-- Attach **Shot 10 Candidate** — IDENTITY and WARDROBE REFERENCE for the elder and younger relative; ENVIRONMENT REFERENCE for the room.
-- Attach **Shot 17 Candidate** — PROP REFERENCE for the locally controlled recording equipment; COMPOSITION REFERENCE for the locally controlled session.
+- Attach **D01 Candidate** — IDENTITY and WARDROBE REFERENCE for the elder and younger relative; ENVIRONMENT REFERENCE for the room.
+- Attach **D02 Candidate** — PROP REFERENCE for the locally controlled recording equipment; COMPOSITION REFERENCE for the locally controlled session.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 10 reference image for the exact elderly speaker, younger relative, clothing and room. Use the supplied Shot 17 reference image for the locally controlled recording equipment and session. In the same modest room, show the younger relative using a small contemporary sampler or audio workstation with the screen turned away while the elder listens. The younger person is creating something new from the recorded voice with the elder present and attentive. Frame an intimate eye-level 35 mm two-person composition. Use soft natural light, low saturation, ordinary cables and equipment, lived-in surfaces and subtle film grain. Do not turn the scene into a nightclub, commercial music studio or sentimental performance. Do not show readable interfaces, logos, headphones as fashion styling, celebrity likenesses, staged smiles or extra people.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied D01 reference image for the exact elderly speaker, younger relative, clothing and room. Use the supplied D02 reference image for the locally controlled recording equipment and session. In the same modest room, show the younger relative using a small contemporary sampler or audio workstation with the screen turned away while the elder listens. The younger person is creating something new from the recorded voice with the elder present and attentive. Frame an intimate eye-level 35 mm two-person composition. Use soft natural light, low saturation, ordinary cables and equipment, lived-in surfaces and subtle film grain. Do not turn the scene into a nightclub, commercial music studio or sentimental performance. Do not show readable interfaces, logos, headphones as fashion styling, celebrity likenesses, staged smiles or extra people.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `22_<generation-id>.png`.
-- Record Shot 22, the exact prompt and the Higgsfield generation identifier.
+- Record D03, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same elder and younger relative, the same modest room, ordinary contemporary equipment and an unreadable interface.
 - Keep the result as a Candidate for contact-sheet review. Do not promote it to Approved.
 
 ## Group E — Museum textile
 
+Local sequence: `E01 → E02`
+
+Film-shot mapping: `E01 = 11`; `E02 = 13`.
+
 Build the exact textile fragment, then preserve its physical design during packing.
 
-### Shot 11 — BEHIND GLASS
+### E01 — BEHIND GLASS
+
+**Film shot:** `11`
 
 #### 1. References to attach
 
@@ -401,36 +453,44 @@ Create one photoreal 16:9 landscape documentary still. Use raw observational-doc
 #### 3. Result handling
 
 - Download the original result as `11_<generation-id>.png`.
-- Record Shot 11, the exact prompt and the Higgsfield generation identifier.
+- Record E01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the exact asymmetric charcoal, faded-rust and cream textile pattern, the frayed lower corner and two repaired seams. If the textile is not reusable as an exact prop reference, record a technical failure and stop the museum-textile group.
-- If technically usable, make it the provisional exact-textile reference for Shot 13.
+- If technically usable, make it the provisional exact-textile reference for E02.
 
-### Shot 13 — PACKING THE RETURN
+### E02 — PACKING THE RETURN
+
+**Film shot:** `13`
 
 #### 1. References to attach
 
-- Attach **Shot 11 Candidate** — PROP REFERENCE for the exact textile fragment and its physical state; ENVIRONMENT REFERENCE for the museum context.
+- Attach **E01 Candidate** — PROP REFERENCE for the exact textile fragment and its physical state; ENVIRONMENT REFERENCE for the museum context.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 11 reference image for the exact textile fragment, its physical state and the museum environment. Show a conservator carefully placing the same textile into an archival transport crate with neutral tissue and support material. The conservator’s action must be professional and restrained. Frame a clear 50 mm close documentary view of hands, textile and crate. Keep the crate label side outside the frame. Use cool institutional daylight, low saturation, tactile fiber, plain wood and subtle film grain. Do not turn the return into a heroic gesture. Do not show readable paperwork, museum branding, white-glove glamour, extra fingers, duplicated textile, impossible folds, text, logos or watermarks.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied E01 reference image for the exact textile fragment, its physical state and the museum environment. Show a conservator carefully placing the same textile into an archival transport crate with neutral tissue and support material. The conservator’s action must be professional and restrained. Frame a clear 50 mm close documentary view of hands, textile and crate. Keep the crate label side outside the frame. Use cool institutional daylight, low saturation, tactile fiber, plain wood and subtle film grain. Do not turn the return into a heroic gesture. Do not show readable paperwork, museum branding, white-glove glamour, extra fingers, duplicated textile, impossible folds, text, logos or watermarks.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `13_<generation-id>.png`.
-- Record Shot 13, the exact prompt and the Higgsfield generation identifier.
+- Record E02, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify exact textile continuity, professional handling, neutral support material and a crate with no readable label.
-- If technically usable, make it the provisional textile-and-crate reference for Shots 14 and 15.
+- If technically usable, make it the provisional textile-and-crate reference for coordinates F02 and F03.
 
 ## Group F — Return community
 
-Build one return community and cultural house. Shot 13 from Group E is also required before Shots 14 and 15.
+Local sequence: `F01 → F02 → F03 → F04 → F05`
 
-### Shot 12 — THE EMPTY PLACE
+Film-shot mapping: `F01 = 12`; `F02 = 14`; `F03 = 15`; `F04 = 16`; `F05 = 21`.
+
+Build one return community and cultural house. E02 from Group E is also required before coordinates F02 and F03.
+
+### F01 — THE EMPTY PLACE
+
+**Film shot:** `12`
 
 #### 1. References to attach
 
@@ -445,101 +505,115 @@ Create one photoreal 16:9 landscape observational-documentary still. Use raw obs
 #### 3. Result handling
 
 - Download the original result as `12_<generation-id>.png`.
-- Record Shot 12, the exact prompt and the Higgsfield generation identifier.
+- Record F01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify a distinct return-community guardian, two community members, the cultural house and the clean empty mounting place. If identity or room is unusable, record a technical failure and stop the return-community group.
-- If technically usable, make it the provisional return-community anchor for Shots 14, 15, 16 and 21.
+- If technically usable, make it the provisional return-community anchor for coordinates F02, F03, F04 and F05.
 
-### Shot 14 — ARRIVAL
+### F02 — ARRIVAL
+
+**Film shot:** `14`
 
 #### 1. References to attach
 
-- Attach **Shot 12 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and community members; ENVIRONMENT REFERENCE for the cultural house.
-- Attach **Shot 13 Candidate** — PROP REFERENCE for the closed transport crate and its scale.
+- Attach **F01 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and community members; ENVIRONMENT REFERENCE for the cultural house.
+- Attach **E02 Candidate** — PROP REFERENCE for the closed transport crate and its scale.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 12 reference image for the exact community guardian, other people and cultural-house environment. Use the supplied Shot 13 reference image for the closed transport crate. Show the same community members receiving the closed crate through the ordinary entrance of their modest cultural house. They move it together with a small practical trolley. No official delegation is present. Frame an eye-level medium-wide 35 mm shot with a visible threshold and quiet physical effort. Use soft natural daylight, low saturation, maintained timber with ordinary age, stone, plain crate wood and subtle film grain. Do not show flags, banners, applause, press cameras, uniforms, ceremonial costume, readable labels, logos, staged celebration, extra people or malformed hands.
+Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied F01 reference image for the exact community guardian, other people and cultural-house environment. Use the supplied E02 reference image for the closed transport crate. Show the same community members receiving the closed crate through the ordinary entrance of their modest cultural house. They move it together with a small practical trolley. No official delegation is present. Frame an eye-level medium-wide 35 mm shot with a visible threshold and quiet physical effort. Use soft natural daylight, low saturation, maintained timber with ordinary age, stone, plain crate wood and subtle film grain. Do not show flags, banners, applause, press cameras, uniforms, ceremonial costume, readable labels, logos, staged celebration, extra people or malformed hands.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `14_<generation-id>.png`.
-- Record Shot 14, the exact prompt and the Higgsfield generation identifier.
+- Record F02, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify return-community identity, clothing and room continuity; verify the crate remains closed and the trolley action is plausible.
-- If technically usable, make it available as a provisional crate-scale and arrival-state reference for Shot 15.
+- If technically usable, make it available as a provisional crate-scale and arrival-state reference for F03.
 
-### Shot 15 — OPENING
+### F03 — OPENING
+
+**Film shot:** `15`
 
 #### 1. References to attach
 
-- Attach **Shot 12 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and community members; ENVIRONMENT REFERENCE for the cultural house.
-- Attach **Shot 13 Candidate** — PROP REFERENCE for the exact textile fragment and protective material.
-- Attach **Shot 14 Candidate** — PROP and COMPOSITION REFERENCE for the crate and its scale in the room.
+- Attach **F01 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and community members; ENVIRONMENT REFERENCE for the cultural house.
+- Attach **E02 Candidate** — PROP REFERENCE for the exact textile fragment and protective material.
+- Attach **F02 Candidate** — PROP and COMPOSITION REFERENCE for the crate and its scale in the room.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 12 reference image for the exact community people and room. Use the supplied Shot 13 reference image for the textile. Use the supplied Shot 14 reference image for the crate and its scale in the room. Show the open crate on a sturdy worktable as the community guardian and two other members see the returned textile for the first time. Keep their expressions quiet, concentrated and complex. One person may rest a hand on the table, but nobody touches the textile yet. Frame an eye-level medium-wide 35 mm shot with the textile visible inside protective material. Use soft window light, low saturation, tactile cloth, paper, wood and subtle film grain. Do not show cheering, staged tears, officials, sacred performance, readable text, flags, logos, extra fingers or duplicated people.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied F01 reference image for the exact community people and room. Use the supplied E02 reference image for the textile. Use the supplied F02 reference image for the crate and its scale in the room. Show the open crate on a sturdy worktable as the community guardian and two other members see the returned textile for the first time. Keep their expressions quiet, concentrated and complex. One person may rest a hand on the table, but nobody touches the textile yet. Frame an eye-level medium-wide 35 mm shot with the textile visible inside protective material. Use soft window light, low saturation, tactile cloth, paper, wood and subtle film grain. Do not show cheering, staged tears, officials, sacred performance, readable text, flags, logos, extra fingers or duplicated people.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `15_<generation-id>.png`.
-- Record Shot 15, the exact prompt and the Higgsfield generation identifier.
+- Record F03, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same three people, room, crate and exact textile; nobody touches the textile.
-- If technically usable, make it available as a provisional returned-textile state reference for Shot 16.
+- If technically usable, make it available as a provisional returned-textile state reference for F04.
 
-### Shot 16 — LEARNING AGAIN
+### F04 — LEARNING AGAIN
+
+**Film shot:** `16`
 
 #### 1. References to attach
 
-- Attach **Shot 12 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and two community members; ENVIRONMENT REFERENCE for the cultural house.
-- Attach **Shot 15 Candidate** — PROP REFERENCE for the returned textile and its opened-return physical state.
+- Attach **F01 Candidate** — IDENTITY and WARDROBE REFERENCE for the guardian and two community members; ENVIRONMENT REFERENCE for the cultural house.
+- Attach **F03 Candidate** — PROP REFERENCE for the returned textile and its opened-return physical state.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 12 reference image for the exact community guardian, other members and room. Use the supplied Shot 15 reference image for the returned textile and opened-return state. Show the guardian seated beside two fictional young adult weavers. The returned textile rests safely on the worktable while the younger people begin a new small sample on a simple loom. They study structure, not copy a tourist pattern. Frame an eye-level medium-wide 35 mm composition that includes both generations, the old textile and the new unfinished work. Use soft natural daylight, low saturation, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Keep clothing contemporary and gestures unperformed. Do not create ceremonial costume, cultural collage, commercial workshop imagery, glowing patterns, text, logos, malformed hands or impossible loom mechanics.
+Create one photoreal 16:9 landscape documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied F01 reference image for the exact community guardian, other members and room. Use the supplied F03 reference image for the returned textile and opened-return state. Show the guardian seated beside two fictional young adult weavers. The returned textile rests safely on the worktable while the younger people begin a new small sample on a simple loom. They study structure, not copy a tourist pattern. Frame an eye-level medium-wide 35 mm composition that includes both generations, the old textile and the new unfinished work. Use soft natural daylight, low saturation, warm maintained wood with ordinary use, tactile fiber and subtle film grain. Keep clothing contemporary and gestures unperformed. Do not create ceremonial costume, cultural collage, commercial workshop imagery, glowing patterns, text, logos, malformed hands or impossible loom mechanics.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `16_<generation-id>.png`.
-- Record Shot 16, the exact prompt and the Higgsfield generation identifier.
+- Record F04, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same guardian and two young weavers, the exact returned textile, a separate new sample and plausible loom mechanics.
-- If technically usable, make it available as a provisional young-weaver and working-material reference for Shot 21.
+- If technically usable, make it available as a provisional young-weaver and working-material reference for F05.
 
-### Shot 21 — THE REPAIR
+### F05 — THE REPAIR
+
+**Film shot:** `21`
 
 #### 1. References to attach
 
-- Attach **Shot 12 Candidate** — IDENTITY and WARDROBE REFERENCE for the return-community members; ENVIRONMENT REFERENCE for the cultural house.
-- Attach **Shot 16 Candidate** — IDENTITY REFERENCE for the young weavers; PROP REFERENCE for their working materials.
+- Attach **F01 Candidate** — IDENTITY and WARDROBE REFERENCE for the return-community members; ENVIRONMENT REFERENCE for the cultural house.
+- Attach **F04 Candidate** — IDENTITY REFERENCE for the young weavers; PROP REFERENCE for their working materials.
 
 #### 2. Prompt to paste
 
 ```text
-Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied Shot 12 reference image for the exact return-community cultural house, guardian and community members. Use the supplied Shot 16 reference image for the young weavers and their working materials. Show the same modest workshop receiving practical conservation materials: untreated timber, archival boxes, humidity tools and rolls of neutral cloth. The community members inspect and organize the supplies themselves. No donor representative appears. Frame an eye-level medium-wide 35 mm shot with clear human action and ordinary physical effort. Use soft natural daylight, low saturation, warm maintained wood with ordinary use, paper, cloth and subtle film grain. Do not show gift-ceremony staging, oversized aid branding, readable labels, flags, logos, applause, luxury equipment, generic poverty, extra people or malformed hands.
+Create one photoreal 16:9 landscape observational-documentary still. Use raw observational-documentary realism, soft available daylight, restrained contrast, low saturation, a location-specific material palette, cared-for surfaces with ordinary use, candid gestures, quiet dignity and subtle natural film grain. Use the supplied F01 reference image for the exact return-community cultural house, guardian and community members. Use the supplied F04 reference image for the young weavers and their working materials. Show the same modest workshop receiving practical conservation materials: untreated timber, archival boxes, humidity tools and rolls of neutral cloth. The community members inspect and organize the supplies themselves. No donor representative appears. Frame an eye-level medium-wide 35 mm shot with clear human action and ordinary physical effort. Use soft natural daylight, low saturation, warm maintained wood with ordinary use, paper, cloth and subtle film grain. Do not show gift-ceremony staging, oversized aid branding, readable labels, flags, logos, applause, luxury equipment, generic poverty, extra people or malformed hands.
 ```
 
 #### 3. Result handling
 
 - Download the original result as `21_<generation-id>.png`.
-- Record Shot 21, the exact prompt and the Higgsfield generation identifier.
+- Record F05, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify the same return-community people and cultural house, practical materials, no donor representative and no readable labels.
 - Keep the result as a Candidate for contact-sheet review. Do not promote it to Approved.
 
 ## Group G — Moving threshold
 
+Local sequence: `G01`
+
+Film-shot mapping: `G01 = 19`.
+
 Create a second, standalone coastal community. Do not reuse the coastal-archive cast or location.
 
-### Shot 19 — MOVING THE THRESHOLD
+### G01 — MOVING THE THRESHOLD
+
+**Film shot:** `19`
 
 #### 1. References to attach
 
@@ -554,16 +628,22 @@ Create one photoreal 16:9 landscape observational-documentary still. Use raw obs
 #### 3. Result handling
 
 - Download the original result as `19_<generation-id>.png`.
-- Record Shot 19, the exact prompt and the Higgsfield generation identifier.
+- Record G01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify a different coastal community, a non-sacred geometric doorway, community-led direction and physically plausible supports.
 - Keep the result as a standalone Candidate. Do not reuse its people or location for the coastal-archive group.
 
 ## Group H — Trade
 
+Local sequence: `H01`
+
+Film-shot mapping: `H01 = 20`.
+
 Create one standalone auction image with no cultural-continuity dependency.
 
-### Shot 20 — THE TRADE
+### H01 — THE TRADE
+
+**Film shot:** `20`
 
 #### 1. References to attach
 
@@ -578,7 +658,7 @@ Create one photoreal 16:9 landscape documentary still. Use raw observational-doc
 #### 3. Result handling
 
 - Download the original result as `20_<generation-id>.png`.
-- Record Shot 20, the exact prompt and the Higgsfield generation identifier.
+- Record H01, the exact prompt and the Higgsfield generation identifier.
 - Keep the result in **Candidate** state. Do not mark it Approved.
 - Verify a generic partly obscured object, unreadable paddles, no auction-house identity, no celebrity likeness and no glamorous villain framing.
 - Keep the result as a standalone Candidate. Do not use it as a cultural-reference anchor.
